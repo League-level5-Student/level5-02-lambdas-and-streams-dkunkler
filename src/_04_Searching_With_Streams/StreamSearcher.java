@@ -10,12 +10,21 @@ public class StreamSearcher {
 	// use Streams to help us out.
 	public long containsCount(String[] strArr, String strToCount) {
 		//2. Convert the String array to a stream
-		
+		int counter = 0;
+		Arrays
+			.stream(strArr)
+			.filter(e -> e.equals(strToCount) && counter++);
+	/*List<Customer> customersWithMoreThan100Points = customers
+  .stream()
+  .filter(c -> c.getPoints() > 100)
+  .collect(Collectors.toList());
+  */
+	
 		//3. Use the filter method with a lambda to extract all the String
 		//   elements that match the String parameter.
 		
 		//4. Return the count of the filtered stream.
-		
-		return 0;
+
+		return counter;
 	}
 }
